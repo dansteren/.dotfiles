@@ -1,0 +1,39 @@
+[core]
+	editor = code --wait
+	pager = less -FRX
+[user]
+	name = Dan Steren
+	email = daniel.d.steren@gmail.com
+	signingkey = 3B76D78AEAD72B81
+[alias]
+	alias = "!f() { git config --global alias.$1 \"$2\"; }; f"
+	aliases = config --get-regexp alias
+	b = branch
+	c = checkout
+	cd = switch
+	mkcd = switch -c
+	cm = checkout master
+	delete-remote = push origin --delete
+	ls = branch
+	new = checkout -b
+	spruce = remote prune origin
+	rename = branch -m
+	reset-branch = reset --hard HEAD
+	s = status
+	unpushed = log @{u}..
+	uncommit = reset HEAD^
+[diff]
+	tool = default-difftool
+[difftool "default-difftool"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[commit]
+	gpgsign = true
+[fetch]
+	prune = true
+[help]
+	autocorrect = 10
