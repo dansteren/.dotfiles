@@ -1,0 +1,53 @@
+config windowHintsSpread true
+config windowHintsShowIcons false
+config windowHintsIgnoreHiddenWindows true
+
+bind e:cmd hint QWERSDFZXC
+
+# Monitor Aliases
+# alias home    3360x1890
+
+# Positional Aliases
+alias full move screenOriginX;screenOriginY screenSizeX;screenSizeY
+alias lefthalf move screenOriginX;screenOriginY screenSizeX/2;screenSizeY
+alias leftthird move screenOriginX;screenOriginY screenSizeX/3;screenSizeY
+alias lefttwothirds move screenOriginX;screenOriginY screenSizeX/3*2;screenSizeY
+alias righthalf move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY
+alias rightthird move screenOriginX+screenSizeX/3+screenSizeX/3;screenOriginY screenSizeX/3;screenSizeY
+alias righttwothirds move screenOriginX+screenSizeX/3;screenOriginY screenSizeX/3*2;screenSizeY
+alias middlehalf move screenOriginX+screenSizeX/4;screenOriginY screenSizeX/2;screenSizeY
+alias middlethird move screenOriginX+screenSizeX/3;screenOriginY screenSizeX/3;screenSizeY
+alias middletwothirds move screenOriginX+screenSizeX/6;screenOriginY screenSizeX/3*2;screenSizeY
+alias tophalf move screenOriginX;screenOriginY screenSizeX;screenSizeY/2
+alias bottomhalf move screenOriginX;screenOriginY+screenSizeY/2 screenSizeX;screenSizeY/2
+alias topleft corner top-left resize:screenSizeX/2;screenSizeY/2
+alias topright corner top-right resize:screenSizeX/2;screenSizeY/2
+alias bottomleft corner bottom-left resize:screenSizeX/2;screenSizeY/2
+alias bottomright corner bottom-right resize:screenSizeX/2;screenSizeY/2
+alias toplefthalf corner top-left resize:screenSizeX/2;screenSizeY/2
+alias topleftthird corner top-left resize:screenSizeX/3;screenSizeY/3
+alias toprighthalf corner top-right resize:screenSizeX/2;screenSizeY/2
+alias toprightthird corner top-right resize:screenSizeX/3;screenSizeY/3
+alias bottomlefthalf corner bottom-left resize:screenSizeX/2;screenSizeY/2
+alias bottomleftthird corner bottom-left resize:screenSizeX/3;screenSizeY/3
+alias bottomrighthalf corner bottom-right resize:screenSizeX/2;screenSizeY/2
+alias bottomrightthird corner bottom-right resize:screenSizeX/3;screenSizeY/3
+alias centerhalf move screenOriginX+screenSizeX/4;screenOriginY+screenSizeY/4 screenSizeX/2;screenSizeY/2
+alias centerthird move screenOriginX+screenSizeX/3;screenOriginY+screenSizeY/3 screenSizeX/3;screenSizeY/3
+alias snapshot snapshot backup save-to-disk
+alias restore activate-snapshot backup
+
+# Layouts
+# default homeMonitor resolutions:${home}
+# layout homeMonitor 'iTerm' ${leftthird} ${home}
+
+# Bindings
+bind up:ctrl;cmd;alt ${full}
+bind left:cmd;alt ${lefthalf}
+bind right:cmd;alt ${righthalf}
+bind up:cmd;alt ${tophalf}
+bind down:cmd;alt ${bottomhalf}
+bind s:cmd;alt ${snapshot}
+bind r:cmd;alt ${restore}
+bind left:ctrl;alt;cmd throw left resize full
+bind right:ctrl;alt;cmd throw right resize full
