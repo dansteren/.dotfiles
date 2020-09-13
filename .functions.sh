@@ -1,7 +1,7 @@
 # General
 
 # Improve ls. I don't care about Icon? and .DS_Store files.
-# Something aboout the removing icon and ds_store doesn't work with zsh
+# Something about the removing icon and ds_store doesn't work with zsh
 # function ll { ls -Alh $@ | grep -v -e .DS_Store -e Icon?; }
 # function ll { ls -Alh $@ }
 function ll { ls -Alh $@ | awk '$NF!=".DS_Store"' }

@@ -1,12 +1,16 @@
 # NOTE: If you want to make an alias available anywhere in your command
 # alias -g ll='ls -Alh'
 
-alias IP="ifconfig en0 | awk '\$1 == \"inet\" {print \$2}'"
-alias whatsmyip="ifconfig en0 | awk '\$1 == \"inet\" {print \$2}'"
+# IP Address
+alias whatsmyip="curl ipinfo.io/ip"
 
 # Docker
 alias dvm='docker run --rm -it -v /:/docker alpine:edge'
 alias dc='docker-compose'
+
+# Dotfiles
+alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
+alias dot="dotfiles"
 
 # Kubernetes
 alias k='kubectl'
