@@ -1,0 +1,16 @@
+# NOTE: If you want to make an alias available anywhere in your command
+# alias -g ll='ls -Alh'
+
+alias IP="ifconfig en0 | awk '\$1 == \"inet\" {print \$2}'"
+alias whatsmyip="ifconfig en0 | awk '\$1 == \"inet\" {print \$2}'"
+
+# Docker
+alias dvm='docker run --rm -it -v /:/docker alpine:edge'
+alias dc='docker-compose'
+
+# Kubernetes
+alias k='kubectl'
+
+# Ruby on Rails
+alias rc='bundle exec rails console'
+alias rs='bundle exec rails server'
