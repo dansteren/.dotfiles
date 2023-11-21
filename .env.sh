@@ -37,3 +37,6 @@ SPACESHIP_PROMPT_ORDER=(
 
 # Set default editor to VS Code
 export EDITOR=/usr/local/bin/code
+
+# Set the gpg key to use for the 2fa cli
+export TWOFA_PGP_KEY="3B76D78AEAD72B81"

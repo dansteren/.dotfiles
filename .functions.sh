@@ -19,3 +19,9 @@ mkcd() {
 dsh() {
   docker exec -it $1 /bin/bash
 }
+
+# Change to the root directory of a repo
+cdr() {
+  root_path=$(git rev-parse --show-toplevel)
+  cd $root_path
+}
